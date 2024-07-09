@@ -3,7 +3,7 @@ import './AboutMe.css';
 
 const AboutMe = () => {
   return (
-    <>
+    <div className='about-me-container'>
       <div className="intro-container">
         <h1 className="typing">Let me Introduce Myself!</h1>
       </div>
@@ -28,7 +28,7 @@ const AboutMe = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }
 
