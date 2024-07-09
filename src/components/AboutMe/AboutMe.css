@@ -1,0 +1,107 @@
+/* General styling for the intro container */
+.intro-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  /* Typing effect for the header */
+  .typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #333; /* Blinking cursor */
+    font-size: 2rem;
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-start infinite;
+  }
+  
+  /* Keyframes for typing and blinking cursor */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 27%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+  }
+  
+  /* Styling for the about me content */
+  .about-me-content {
+    margin: 20px;
+    padding-left: 50px;
+  }
+  
+  .about-me-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: flex-start; /* Align items at the top */
+  }
+  
+  .text-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 700px;
+  }
+  
+  .text-content p {
+    margin-bottom: 1.5rem; /* Add spacing between paragraphs */
+    line-height: 2rem; /* Increase line height for better readability */
+    font-size: 1.25rem;
+    opacity: 0;
+    animation: fadeInText 1s forwards;
+    animation-delay: 2s;
+  }
+  
+  .image-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .image-content img {
+    width: 100%; /* Adjust width to be responsive */
+    max-width: 150px; /* Limit the max-width */
+    height: auto;
+    border-radius: 10px;
+    
+  }
+
+  .image-1, .image-2, .image-3{
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+  }
+  
+  .image-1 {
+    animation-delay: 3s;
+  }
+  
+  .image-2 {
+    animation-delay: 4s;
+  }
+  
+  .image-3 {
+    animation-delay: 5s;
+  }
+  
+  /* Responsive design for better mobile experience */
+  @media (max-width: 768px) {
+    .typing {
+      font-size: 1.5rem;
+    }
+    .about-me-content {
+      margin: 10px;
+      padding: 15px;
+    }
+    .about-me-section {
+      flex-direction: column;
+      align-items: center; /* Center items in column layout */
+    }
+    .text-content {
+      max-width: 100%; /* Allow text to use full width */
+    }
+    .image-content img {
+      max-width: 100px; /* Reduce image size on mobile */
+    }
+  }
+  
