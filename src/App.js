@@ -27,7 +27,7 @@ function App() {
       <NavBar toggleTabs={toggleTabs} />
       <div className="content">
         <div ref={homeRef}>
-          {activeSection === 'home' && <Home />}
+          {activeSection === 'home' && <Home toggleTabs={toggleTabs}/>}
         </div>
         {/* <div ref={skillsRef}>
           {activeSection === 'skills' && <Skills />}

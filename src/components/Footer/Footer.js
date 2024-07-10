@@ -12,10 +12,7 @@ const Footer = () => {
         </div>
         <div className="footer-icons">
           <a href="https://github.com/NimmalaD" target="_blank" rel="noopener noreferrer">
-            <img src="./images/icons8-github-25.png" alt="GitHub" />
-          </a>
-          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <img src="./images/icons8-instagram-48.png" alt="Instagram" />
+            <img src="./images/icons8-github-48.png" alt="GitHub" />
           </a>
           <a href="https://www.linkedin.com/in/dharma-thanishq/" target="_blank" rel="noopener noreferrer">
             <img src="./images/icons8-linkedin-48.png" alt="LinkedIn" />

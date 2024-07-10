@@ -1,114 +1,102 @@
-/* General styling for the intro container */
+/* src/components/AboutMe/AboutMe.css */
+
+.about-me-container {
+  padding: 80px 20px 40px; /* Adjust top padding to account for fixed navbar */
+  background-color: #f5f5f5;
+  color: #333;
+}
+
 .intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  position: relative;
-  top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-/* Typing effect for the header */
 .typing {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid #333; /* Blinking cursor */
-  font-size: 2rem;
-  animation: typing 2s steps(40, end), blink-caret 0.75s step-start infinite;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap; /* Ensures the text doesn't wrap to the next line */
+  overflow: hidden; /* Hides the overflowing text */
+  border-right: 0.15em solid #333; /* Creates a caret */
+  animation: typing 1s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-.about-me-container{
-  background-color: #f7f7f7;
-  height: 84vh;
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInText1 1s forwards;
+  animation-delay: 1s;
 }
-/* Keyframes for typing and blinking cursor */
+
+.about-me-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-content {
+  flex: 1;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-1 {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .about-me-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content, .image-content {
+    width: 100%;
+  }
+
+  .typing {
+    font-size: 2em;
+  }
+}
+
 @keyframes typing {
   from { width: 0; }
-  to { width: 27%; }
+  to { width: 35%; }
 }
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: #333; }
 }
-
-/* Styling for the about me content */
-.about-me-content {
-  /* margin: 20px; */
-  /* padding-left: 50px; */
-  position: relative;
-  top: 40px;
-  left: 60px;
-}
-
-.about-me-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 100px;
-  align-items: flex-start; /* Align items at the top */
-}
-
-.text-content {
-  flex: 1;
-  min-width: 300px;
-  max-width: 700px;
-}
-
-.text-content p {
-  margin-bottom: 1.5rem; /* Add spacing between paragraphs */
-  line-height: 2rem; /* Increase line height for better readability */
-  font-size: 1.25rem;
-  opacity: 0;
-  animation: fadeInText 1s forwards;
-  animation-delay: 2s;
-}
-
-.image-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.image-content img {
-  width: 100%; /* Adjust width to be responsive */
-  max-width: 150px; /* Limit the max-width */
-  height: auto;
-  border-radius: 10px;
-}
-
-.image-1, .image-2, .image-3 {
-  opacity: 0;
-  animation: fadeInText 2s forwards;
-}
-
-.image-1 {
-  animation-delay: 3s;
-  color: #f7f7f7;
-}
-
-.image-2 {
-  animation-delay: 4s;
-}
-
-.image-3 {
-  animation-delay: 5s;
-}
-
-/* Responsive design for better mobile experience */
-@media (max-width: 768px) {
-  .typing {
-    font-size: 1.5rem;
+@keyframes fadeInText1 {
+  from{
+    opacity: 0;
+    transform: translate(0);
   }
-  .about-me-content {
-    margin: 10px;
-    padding: 15px;
-  }
-  .about-me-section {
-    flex-direction: column;
-    align-items: center; /* Center items in column layout */
-  }
-  .text-content {
-    max-width: 100%; /* Allow text to use full width */
-  }
-  .image-content img {
-    max-width: 100px; /* Reduce image size on mobile */
+  to{
+    opacity: 1;
+    transform: translate(0);
   }
 }

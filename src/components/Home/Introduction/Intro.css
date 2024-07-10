@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 84vh;
+    height: 100vh;
     padding: 20px;
     background: #f7f7f7; /* Light gray background for contrast */
     color: #333;
@@ -52,6 +52,29 @@
     font-weight: bold;
   }
   
+  .intro-know-more{
+    position: relative;
+    top: 30px;
+    opacity: 0;
+    animation: fadeInText1 1s forwards;
+    animation-delay: 3s;
+  }
+  .intro-know-more button {
+    font-size: large;
+    background-color: #464b47; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background color and transform */
+  }
+
+  .intro-know-more button:hover {
+    background-color: #333; /* Darker green background on hover */
+    transform: scale(1.05); /* Slightly increase the size on hover */
+  }
+
   /* Intro Image */
   .intro-image {
     margin-top: 20px;
@@ -107,6 +130,17 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInText1 {
+    from{
+      opacity: 0;
+      transform: translate(0);
+    }
+    to{
+      opacity: 1;
+      transform: translate(0);
     }
   }
   

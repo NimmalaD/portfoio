@@ -1,38 +1,41 @@
 /* src/components/Footer/Footer.css */
 
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 40px; /* Adjust padding as needed */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .footer-text {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .footer-icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .footer-icons a {
-    margin: 0 10px;
-  }
-  
-  .footer-icons img {
-    width: 25px;
-    height: 25px;
-  }
-  
+  background-color: black;
+  color: #fff;
+  padding: 20px 40px; /* Adjust padding as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-text {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px; /* Set the same width */
+  height: 25px; /* Set the same height */
+}
+
+.footer-icons img {
+  max-width: 100%; /* Ensure the image scales properly within the container */
+  max-height: 100%; /* Ensure the image scales properly within the container */
+}
