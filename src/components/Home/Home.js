@@ -1,10 +1,10 @@
 import React from 'react'
 import Intro from './Introduction/Intro'
 
-const Home = () => {
+const Home = ({toggleTabs}) => {
   return (
     <div>
-        <Intro></Intro>
+        <Intro toggleTabs={toggleTabs}></Intro>
     </div>
   )
 }
