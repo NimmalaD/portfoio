@@ -29,6 +29,8 @@ const NavBar = ({toggleTabs}) => {
           <li className="nav-contents-li" onClick={()=>toggleTabs('aboutme')}>About Me</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('projects')}>Projects</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('links')}>Links</li>
+          <li className="nav-contents-li" onClick={()=>toggleTabs('contactme')}>Contact Me</li>
+
         </ul>
       </nav>
     </div>
