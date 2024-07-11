@@ -4,22 +4,17 @@ import NavBar from "./components/NavBar/NavBar";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Footer from "./components/Footer/Footer";
 import './App.css';
+import ContactMe from "./components/ContactMe/ContactMe";
 
 function App() {
   const homeRef = useRef(null);
   // const skillsRef = useRef(null);
+  const contactMeRef = useRef(null)
   const aboutMeRef = useRef(null);
   const [activeSection, setActiveSection] = useState('home');
 
   const toggleTabs = (section) => {
     setActiveSection(section);
-    if (section === 'home' && homeRef.current) {
-      homeRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if (section === 'aboutme' && aboutMeRef.current) {
-      aboutMeRef.current.scrollIntoView({ behavior: 'smooth' });
-    // } else if (section === 'skills' && skillsRef.current) {
-    //   skillsRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (
@@ -34,6 +29,9 @@ function App() {
         </div> */}
         <div ref={aboutMeRef}>
           {activeSection === 'aboutme' && <AboutMe />}
+        </div>
+        <div ref={contactMeRef}>
+          {activeSection === 'contactme' && <ContactMe></ContactMe>}
         </div>
       </div>
       <Footer />
