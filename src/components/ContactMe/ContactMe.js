@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
+
 import './ContactMe.css';
+import CustomAlert from '../Alert/CustomAlert';
 
 const ContactMe = () => {
+    const [showAlert, setShowAlert] = useState(false)
+    const [alertMessage, setAlertMessage] = useState('')
     const [details, setDetails] = useState({
       firstName: '',
       lastName: '',
-      email: ''
+      email: '',
+      note: ''
     })
 
     const handleChange = (event) =>{
@@ -16,11 +21,16 @@ const ContactMe = () => {
     const handleSubmit = (event) => {
       event.preventDefault();
       console.log('Form submitted:', details);
+      const message = `Thank you ${details.firstName}. Will reach out soon!`
+      setShowAlert(true)
+      setAlertMessage(message)
       setDetails({
         firstName: '',
         lastName: '',
-        email: ''
+        email: '',
+        note: ''
       })
+      
     }
     useEffect(()=>{
       
@@ -28,6 +38,10 @@ const ContactMe = () => {
 
   return (
     <div className='contact-me-container'>
+      <div>
+        <CustomAlert show={showAlert} onClose={()=> setShowAlert(false)} message={alertMessage} variant={'info'}>
+        </CustomAlert>
+      </div>
         <div className='lets-connect'>
             <h2 className='h2-lets-connect'>Let's Connect!!</h2>
         </div>
@@ -43,6 +57,10 @@ const ContactMe = () => {
         <div>
           <label>Email</label>
           <input type='email' name='email' value={details.email} onChange={handleChange} required />
+        </div>
+        <div>
+          <label>Leave a Note</label>
+          <input type='text' name='note' value={details.note || " "} onChange={handleChange} required rows="4" />
         </div>
         <div>
           <button type='submit'>Submit</button>

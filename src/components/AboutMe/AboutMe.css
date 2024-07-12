@@ -20,7 +20,7 @@
   white-space: nowrap; 
   overflow: hidden; /* Hides the overflowing text */
   border-right: 0.1em solid #333; /* Creates a caret */
-  animation: typing 2s steps(70, start), blink-caret 0.5s step-start infinite;
+  animation: typing 1s steps(100, start), blink-caret 0.5s step-start infinite;
 }
 
 .about-me-content {
@@ -81,7 +81,7 @@
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 100%; } 
+  to { width: 40%; } 
 }
 
 @keyframes blink-caret {
