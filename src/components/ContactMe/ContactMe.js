@@ -63,7 +63,7 @@ const ContactMe = () => {
           </div>
           <div>
             <label>Leave a Note</label>
-            <textarea name='note' value={details.note || " "} onChange={handleChange} required rows="4" />
+            <textarea name='note' value={details.note || " "} onChange={handleChange} required rows='4' />
           </div>
           <div>
             <button type='submit'>Submit</button>
