@@ -2,33 +2,38 @@ import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 
 const NavBar = ({toggleTabs}) => {
-  const [currentDate, setcurrentDate] = useState(new Date());
+  const [scrollY, setScrollY] = useState(0)
+  const [isAtTop, setIsAtTop] = useState(false)
+
+  const handleScroll = () =>{
+    
+    if (window.scrollY === 0){
+      setIsAtTop(false)
+    }
+    else if(window.scrollY > scrollY){
+      setIsAtTop(true)
+    }
+    setScrollY(window.scrollY)
+  }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setcurrentDate(new Date());
-    });
-    return () => clearInterval(interval);
-  }, []);
-
-  const formattedDate = currentDate.toLocaleDateString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  });
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, [scrollY]);
 
   return (
     <div>
-      <nav className="navbar">
+      <nav className={`navbar ${isAtTop ? 'fade-out' : ''}`}>
         <div>
-          <p>{formattedDate}</p>
+          <h1>Dharma Nimmala</h1>
         </div>
-        <ul className="nav-contents-ul">
+        <ul className="nav-contents-ul" >
           <li className="nav-contents-li" onClick={()=>toggleTabs('home')}>Home</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('skills')}>Skills</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('aboutme')}>About Me</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('projects')}>Projects</li>
-          <li className="nav-contents-li" onClick={()=>toggleTabs('links')}>Links</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('contactme')}>Contact Me</li>
 
         </ul>

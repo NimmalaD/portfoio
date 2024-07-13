@@ -5,10 +5,11 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Footer from "./components/Footer/Footer";
 import './App.css';
 import ContactMe from "./components/ContactMe/ContactMe";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   const homeRef = useRef(null);
-  // const skillsRef = useRef(null);
+  const skillsRef = useRef(null);
   const contactMeRef = useRef(null)
   const aboutMeRef = useRef(null);
   const [activeSection, setActiveSection] = useState('home');
@@ -24,9 +25,9 @@ function App() {
         <div ref={homeRef}>
           {activeSection === 'home' && <Home toggleTabs={toggleTabs}/>}
         </div>
-        {/* <div ref={skillsRef}>
+        <div ref={skillsRef}>
           {activeSection === 'skills' && <Skills />}
-        </div> */}
+        </div>
         <div ref={aboutMeRef}>
           {activeSection === 'aboutme' && <AboutMe />}
         </div>

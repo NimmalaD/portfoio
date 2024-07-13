@@ -1,0 +1,78 @@
+.skills-container {
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.skills-container h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.1em solid #333;
+    animation: typing_skills 0.5s steps(70, end), blink-caret_skills 0.5s step-end infinite;
+    margin: 0 auto; /* Center the h1 */
+    display: inline-block; /* Ensure the h1 is treated as an inline block for centering */
+}
+
+.skills-grid {
+    opacity: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 50px;
+    column-gap: 110px;
+    justify-items: center;
+    padding: 50px;
+    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+}
+
+.skills-grid.show {
+    opacity: 1; /* Set opacity to 1 when the 'show' class is added */
+}
+
+.skill-section {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border: 2px solid #e0e0e0;
+}
+
+.skill-section h4 {
+    padding-bottom: 9px;
+}
+
+.skill-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill-section li {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.skill-section li svg {
+    margin-right: 8px; /* Adds space between the icon and text */
+}
+
+@keyframes typing_skills {
+    from { width: 0; }
+    to { width: 13%; } /* Adjust width as needed */
+}
+
+@keyframes blink-caret_skills {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+}

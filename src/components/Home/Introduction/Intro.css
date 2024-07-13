@@ -7,7 +7,6 @@
   
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fff; /* Light background */
     color: #333; /* Dark text color */
   }
   
@@ -19,7 +18,7 @@
     justify-content: center;
     height: 100vh;
     padding: 20px;
-    background: #f7f7f7; /* Light gray background for contrast */
+     /* Light gray background for contrast */
     color: #333;
     text-align: center;
   }
