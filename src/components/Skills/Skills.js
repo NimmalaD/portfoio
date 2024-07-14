@@ -47,7 +47,7 @@ const Skills = () => {
             <li><SiPacker /> Packer</li>
             <li><SiPulumi /> Pulumi</li>
             <li><SiTerraform /> Terraform</li>
-            <li><FaGithub /> GitHub</li>
+            <li><FaGithub /> GitHub Actions</li>
           </ul>
         </section>
         <section className="skill-section">
@@ -59,7 +59,6 @@ const Skills = () => {
             <li><FaReact /> React.js</li>
             <li><FaNode /> Node.js</li>
             <li><FaCloud /> REST</li>
-            <li><FaCloud /> AJAX</li>
           </ul>
         </section>
         <section className="skill-section">
@@ -73,16 +72,13 @@ const Skills = () => {
           </ul>
         </section>
         <section className="skill-section">
-          <h4>Tools & IDEs</h4>
+          <h4>Tools</h4>
           <ul>
             <li><FaJava /> Maven</li>
             <li><FaGitAlt /> Git</li>
             <li><FaAws /> Jenkins</li>
             <li><FaCloud /> Kanban</li>
             <li><SiRabbitmq /> RabbitMQ</li>
-            <li><SiIntellijidea /> IntelliJ</li>
-            <li><SiEclipseide /> Eclipse</li>
-            <li><SiVisualstudiocode /> VSCode</li>
           </ul>
         </section>
       </article>

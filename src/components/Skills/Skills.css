@@ -100,7 +100,10 @@
     align-items: center;
     background-color: white;
   }
-  
+  .skill-section li:hover{
+    border: 1px solid gray;
+    color: gray;
+  }
   .skill-section li svg {
     margin-right: 8px; /* Adds space between the icon and text */
   }

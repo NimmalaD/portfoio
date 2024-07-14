@@ -31,8 +31,8 @@ const NavBar = ({toggleTabs}) => {
         </div>
         <ul className="nav-contents-ul" >
           <li className="nav-contents-li" onClick={()=>toggleTabs('home')}>Home</li>
-          <li className="nav-contents-li" onClick={()=>toggleTabs('skills')}>Skills</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('aboutme')}>About Me</li>
+          <li className="nav-contents-li" onClick={()=>toggleTabs('skills')}>Skills</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('projects')}>Projects</li>
           <li className="nav-contents-li" onClick={()=>toggleTabs('contactme')}>Contact Me</li>
 

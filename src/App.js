@@ -6,12 +6,14 @@ import Footer from "./components/Footer/Footer";
 import './App.css';
 import ContactMe from "./components/ContactMe/ContactMe";
 import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
   const contactMeRef = useRef(null)
   const aboutMeRef = useRef(null);
+  const projectsRef = useRef(null)
   const [activeSection, setActiveSection] = useState('home');
 
   const toggleTabs = (section) => {
@@ -30,6 +32,9 @@ function App() {
         </div>
         <div ref={aboutMeRef}>
           {activeSection === 'aboutme' && <AboutMe />}
+        </div>
+        <div ref={projectsRef}>
+          {activeSection === 'projects' && <Projects></Projects>}
         </div>
         <div ref={contactMeRef}>
           {activeSection === 'contactme' && <ContactMe></ContactMe>}
