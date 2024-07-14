@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaJava, FaPython, FaNode, FaCloud, FaHtml5, FaCss3, FaJs, FaReact, FaGitAlt, FaAws, FaGithub } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiPacker, SiPulumi, SiTerraform, SiSpring, SiRedis, SiVisualstudiocode, SiPostgresql } from 'react-icons/si';
+import { SiMongodb, SiRabbitmq,SiExpress, SiPacker, SiPulumi, SiTerraform, SiSpring, SiRedis, SiVisualstudiocode, SiPostgresql } from 'react-icons/si';
 import './Projects.css';
 
 const Projects = () => {
@@ -48,6 +48,7 @@ const Projects = () => {
             <li><FaJava /> SpringBoot</li>
             <li><SiRedis /> Redis</li>
             <li><FaCloud />Elasticsearch</li>
+            <li><SiRabbitmq /> RabbitMQ</li>
           </ul>
         </section>
       </article>

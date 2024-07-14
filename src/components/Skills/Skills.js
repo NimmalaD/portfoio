@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaJava, FaPython, FaDatabase, FaCloud, FaHtml5, FaCss3, FaJs, FaReact, FaNode, FaGitAlt, FaAws, FaGithub } from 'react-icons/fa';
-import { SiMysql, SiPostgresql, SiMongodb, SiElasticsearch, SiRedis, SiPacker, SiPulumi, SiTerraform, SiSpring, SiRabbitmq, SiIntellijidea, SiEclipseide, SiVisualstudiocode } from 'react-icons/si';
+import { SiMysql, SiExpress, SiPostgresql, SiMongodb, SiElasticsearch, SiRedis, SiPacker, SiPulumi, SiTerraform, SiSpring, SiRabbitmq, SiIntellijidea, SiEclipseide, SiVisualstudiocode } from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {
@@ -64,7 +64,7 @@ const Skills = () => {
         <section className="skill-section">
           <h4>Frameworks</h4>
           <ul>
-            <li><FaNode /> Express</li>
+            <li><SiExpress /> Express</li>
             <li><SiSpring /> Spring</li>
             <li><SiSpring /> Spring MVC</li>
             <li><SiSpring /> Spring Boot</li>
