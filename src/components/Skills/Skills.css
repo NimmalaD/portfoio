@@ -18,8 +18,8 @@
     white-space: nowrap;
     border-right: 0.1em solid #333;
     animation: typing_skills 0.5s steps(70, end), blink-caret_skills 0.5s step-end infinite;
-    margin: 0 auto; /* Center the h1 */
-    display: inline-block; /* Ensure the h1 is treated as an inline block for centering */
+    margin: 0 auto; 
+    display: inline-block; 
 }
 
 .skills-grid {
@@ -45,6 +45,10 @@
     border: 2px solid #e0e0e0;
 }
 
+.skill-section:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in, 0.3s ease-out;
+}
 .skill-section h4 {
     padding-bottom: 9px;
 }

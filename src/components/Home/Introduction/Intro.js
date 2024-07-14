@@ -8,7 +8,7 @@ const Intro = ({ toggleTabs }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIcons(true);
-    }, 3500);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 

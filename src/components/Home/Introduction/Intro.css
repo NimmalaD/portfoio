@@ -37,11 +37,11 @@ body {
 }
 
 .h1-name {
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 
 .h1-position {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 .h1-name strong {
@@ -55,7 +55,7 @@ body {
   top: 30px;
   opacity: 0;
   animation: fadeInText1 1s forwards;
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 
 .intro-know-more button {
