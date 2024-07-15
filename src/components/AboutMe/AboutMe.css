@@ -47,10 +47,21 @@
   flex: 1;
   font-size: 1.2em;
   line-height: 1.6;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px #e0e0e0;
+  border: 2px solid #e0e0e0;
+  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s, color 0.3s;
+}
+.text-content:hover{
+  transition: transform 0.3s ease;
+  box-shadow: 10px 10px black;
+  border: 2px solid black;
 }
 .text-content p strong{
   color: red;
+}
+
+.text-content p{
+  padding: 10px;
 }
 .image-content {
   flex: 1;

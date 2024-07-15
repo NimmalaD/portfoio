@@ -11,11 +11,8 @@ const AboutMe = () => {
         <section className='about-me-section'>
           <div className="text-content">
             <p>Hello! I'm <strong>Dharma Nimmala</strong>, a <strong>developer</strong> with expertise in full-stack development and <strong>microservices</strong>. I specialize in designing RESTful APIs and deploying enterprise applications using React.js, Node.js, and Spring Boot. I am passionate about building <strong>efficient</strong>, flexible, and <strong>user-friendly</strong> applications.</p>
-            <br></br>
+          
             <p>With <strong>hands-on</strong> experience in DevOps tools and Cloud platforms, including AWS, I focus on CI/CD and cloud integration to <strong>optimize</strong> and extend transaction systems, develop visualization tools, and create user-friendly interfaces. My goal is to innovate and deliver <strong>cutting-edge</strong> solutions.</p>
-          </div>
-          <div className="image-content">
-            <img className="image-1" src="./images/northeasternLogo.jpg" alt="Image description" />
           </div>
         </section>
       </div>
