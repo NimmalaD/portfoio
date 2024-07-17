@@ -69,6 +69,10 @@ const ContactMe = () => {
             <button type='submit'>Submit</button>
           </div>
         </form>
+
+        <div className='mail'>
+          <p>Please feel free to send a mail to <strong>dharmanimmala04@gmail.com</strong></p>
+        </div>
       </div>
    
   );

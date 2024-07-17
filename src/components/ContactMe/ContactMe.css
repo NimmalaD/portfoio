@@ -18,7 +18,7 @@ form {
   opacity: 0;
   transition: opacity 0.5s;
   border: 2px solid #e0e0e0;
-  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s, color 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 form.fade-in {
@@ -26,8 +26,7 @@ form.fade-in {
 }
 
 form:hover{
-  transition: transform 0.3s;
-  box-shadow: 10px 10px black;
+  box-shadow: 5px 5px black;
   border: 2px solid black;
 }
 
@@ -92,6 +91,10 @@ button:hover {
   white-space: nowrap;
   border-right: 0.1em solid #333; /* Corrected border-right property */
   animation: typing1 0.5s steps(70, end), blink-caret1 0.5s step-end infinite;
+}
+.mail{
+  position: relative;
+  top: 50px;
 }
 
 @keyframes typing1 {

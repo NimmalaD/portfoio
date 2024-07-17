@@ -1,6 +1,7 @@
 .about-me-container {
   padding: 60px 20px 40px; /* Adjust top padding to account for fixed navbar */
   color: #333;
+  /* padding-bottom: 270px; */
 }
 
 .intro-container {
@@ -35,7 +36,7 @@
 
 .about-me-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   gap: 20px;
   width: 100%;
@@ -47,54 +48,51 @@
   flex: 1;
   font-size: 1.2em;
   line-height: 1.6;
-  box-shadow: 10px 10px #e0e0e0;
-  border: 2px solid #e0e0e0;
-  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s, color 0.3s;
-}
-.text-content:hover{
-  transition: transform 0.3s ease;
-  box-shadow: 10px 10px black;
-  border: 2px solid black;
-}
-.text-content p strong{
-  color: red;
-}
-
-.text-content p{
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s, color 0.3s, box-shadow 0.3s;
   padding: 10px;
+  border: 2px solid #e0e0e0;
 }
-.image-content {
-  flex: 1;
+
+.text-content:hover{
+  box-shadow: 6px 6px black;
+  border: 2px solid black;
+
+}
+
+.text-content p strong {
+  color: rgb(15, 41, 47);
+  font-size: 1.3rem;
+}
+
+.experience-buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.image-1 {
-  max-width: 50%; /* Adjust the max-width as needed */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.experience-buttons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .about-me-section {
-    flex-direction: column;
-    align-items: center;
-  }
+.experience-buttons li {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  box-shadow:5px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
 
-  .text-content, .image-content {
-    width: 100%;
-  }
-
-  .typing {
-    font-size: 2em;
-  }
-
-  .image-1 {
-    max-width: 90%; /* Adjust the max-width for smaller screens */
-  }
+.experience-buttons li:hover {
+  background-color: #e0e0e0;
+  box-shadow: 3px 3px rgba(0, 0, 0, 1);
 }
 
 @keyframes typing {
