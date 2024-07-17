@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import "./Intro.css";
+import ContactPoints from "../../ContactPoints/ContactPoints";
 
 const Intro = ({ toggleTabs }) => {
-  const [showIcons, setShowIcons] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIcons(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div>
@@ -29,16 +22,7 @@ const Intro = ({ toggleTabs }) => {
           <img src="./images/IMG_4262.JPG" alt="Profile Pic"></img>
         </div>
       </section>
-      <div className={`contact-icons-container ${showIcons ? 'slide-in' : ''}`}>
-        <div className="contact-icons">
-          <a className={`${showIcons ? 'slide-in' : ''}`} href="https://github.com/NimmalaD" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={40} />
-          </a>
-          <a className={`${showIcons ? 'slide-in' : ''}`} href="https://www.linkedin.com/in/dharma-thanishq/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={40} />
-          </a>
-        </div>
-      </div>
+      <ContactPoints></ContactPoints>
     </div>
   );
 };

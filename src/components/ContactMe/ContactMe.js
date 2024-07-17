@@ -1,54 +1,55 @@
 import React, { useEffect, useState } from 'react';
 import './ContactMe.css';
 import CustomAlert from '../Alert/CustomAlert';
+import ContactPoints from '../ContactPoints/ContactPoints';
 
 const ContactMe = () => {
-  const [showAlert, setShowAlert] = useState(false);
-  const [showForm, setShowForm] = useState(false);
-  const [alertMessage, setAlertMessage] = useState('');
-  const [details, setDetails] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    note: ''
-  });
+  // const [showAlert, setShowAlert] = useState(false);
+  // const [showForm, setShowForm] = useState(false);
+  // const [alertMessage, setAlertMessage] = useState('');
+  // const [details, setDetails] = useState({
+  //   firstName: '',
+  //   lastName: '',
+  //   email: '',
+  //   note: ''
+  // });
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setDetails(prevDetails => ({ ...prevDetails, [name]: value }));
-  };
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setDetails(prevDetails => ({ ...prevDetails, [name]: value }));
+  // };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const message = `Thank you ${details.firstName}. Will reach out soon!`;
-    setShowAlert(true);
-    setAlertMessage(message);
-    setDetails({
-      firstName: '',
-      lastName: '',
-      email: '',
-      note: ''
-    });
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const message = `Thank you ${details.firstName}. Will reach out soon!`;
+  //   setShowAlert(true);
+  //   setAlertMessage(message);
+  //   setDetails({
+  //     firstName: '',
+  //     lastName: '',
+  //     email: '',
+  //     note: ''
+  //   });
+  // };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowForm(true);
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowForm(true);
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <div className='contact-me-container'>
-      <div>
+      {/* <div>
         <CustomAlert show={showAlert} onClose={() => setShowAlert(false)} message={alertMessage} variant={'info'} />
-      </div>
+      </div> */}
       <div className='lets-connect'>
         <h2 className='h2-lets-connect'>Let's Connect!!</h2>
       </div>
       
-        <form className={showForm ? 'fade-in' : ''} onSubmit={handleSubmit}>
+        {/* <form className={showForm ? 'fade-in' : ''} onSubmit={handleSubmit}>
           <div>
             <label>First Name</label>
             <input type='text' name='firstName' value={details.firstName} onChange={handleChange} required />
@@ -68,10 +69,10 @@ const ContactMe = () => {
           <div>
             <button type='submit'>Submit</button>
           </div>
-        </form>
+        </form> */}
 
         <div className='mail'>
-          <p>Please feel free to send a mail to <strong>dharmanimmala04@gmail.com</strong></p>
+          <ContactPoints></ContactPoints>
         </div>
       </div>
    

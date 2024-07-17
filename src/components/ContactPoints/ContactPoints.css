@@ -1,0 +1,87 @@
+/* Contact Icons */
+.contact-icons-container {
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+    opacity: 0;
+  }
+  
+  .contact-icons-container.slide-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .contact-icons a {
+    color: #333;
+    transition: color 0.3s, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  
+  .contact-icons a:nth-child(1).slide-in {
+    animation: slide-in 0.3s forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .contact-icons a:nth-child(2).slide-in {
+    animation: slide-in 0.3s forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .contact-icons a:nth-child(3).slide-in {
+    animation: slide-in 0.3s forwards;
+    animation-delay: 0.9s;
+  }
+  
+  .contact-icons a:hover {
+    color: gray; 
+    transform: scale(1.2); /* Corrected the scaling factor to be positive */
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .intro-section {
+      flex-direction: row;
+      text-align: left;
+    }
+  
+    .intro-name {
+      margin-right: 40px;
+    }
+  
+    .h1-there, .h1-name, .h1-position {
+      font-size: 2.5rem;
+    }
+  
+    .h1-name strong {
+      font-size: 3.5rem;
+    }
+  
+    .intro-image img {
+      width: 250px; /* Larger size for bigger screens */
+      height: 250px;
+    }
+  }
+  
+  .mail {
+    position: relative;
+    top: 200px;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
