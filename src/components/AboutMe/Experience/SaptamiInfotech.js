@@ -1,36 +1,15 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 import {
-  FaJava,
-  FaPython,
   FaNode,
-  FaCloud,
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaGitAlt,
-  FaAws,
-  FaGithub,
 } from "react-icons/fa";
 import {
-  SiMongodb,
-  SiRabbitmq,
-  SiExpress,
-  SiPacker,
-  SiPulumi,
-  SiTerraform,
-  SiSpring,
-  SiRedis,
-  SiVisualstudiocode,
-  SiPostgresql,
   SiMysql,
   SiCss3,
   SiHtml5,
   SiJavascript,
 } from "react-icons/si";
 import { SiReact } from "react-icons/si";
-import { CgFigma } from "react-icons/cg";
 import { MdOutlineDeveloperMode } from "react-icons/md";
 import "./Experience.css";
 
