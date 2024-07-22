@@ -102,7 +102,7 @@ body {
 }
 
 /* Contact Icons */
-.contact-icons-container {
+/* .contact-icons-container {
   text-align: center;
   margin-top: 20px;
   opacity: 0;
@@ -141,7 +141,7 @@ body {
 .contact-icons a:hover {
   color: gray; 
   transform: scale(1.2); 
-}
+} */
 
 /* Responsive Design */
 @media (min-width: 768px) {
