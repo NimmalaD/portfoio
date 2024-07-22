@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaJava, FaPython, FaDatabase, FaCloud, FaHtml5, FaCss3, FaJs, FaReact, FaNode, FaGitAlt, FaAws, FaGithub } from 'react-icons/fa';
-import { SiMysql, SiExpress, SiPostgresql, SiMongodb, SiElasticsearch, SiRedis, SiPacker, SiPulumi, SiTerraform, SiSpring, SiRabbitmq, SiIntellijidea, SiEclipseide, SiVisualstudiocode } from 'react-icons/si';
+import { SiMysql, SiExpress, SiPostgresql, SiMongodb, SiElasticsearch, SiRedis, SiPacker, SiPulumi, SiTerraform, SiSpring, SiRabbitmq} from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {

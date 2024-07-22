@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './ContactMe.css';
-import CustomAlert from '../Alert/CustomAlert';
 import ContactPoints from '../ContactPoints/ContactPoints';
 
 const ContactMe = () => {

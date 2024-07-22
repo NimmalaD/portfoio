@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import React from "react";
 import "./Intro.css";
 import ContactPoints from "../../ContactPoints/ContactPoints";
 
