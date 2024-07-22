@@ -131,10 +131,9 @@ body {
   animation-delay: 0.6s;
 }
 
-
 .contact-icons a:hover {
   color: gray; 
-  transform: scale(0.2); 
+  transform: scale(1.2); 
 }
 
 /* Responsive Design */
@@ -159,6 +158,40 @@ body {
   .intro-image img {
     width: 250px; /* Larger size for bigger screens */
     height: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-section {
+    padding: 10px;
+    height: auto;
+  }
+
+  .intro-name {
+    margin-bottom: 20px;
+  }
+
+  .h1-there, .h1-name, .h1-position {
+    font-size: 1.5rem;
+  }
+
+  .h1-name strong {
+    font-size: 2rem;
+  }
+
+  .intro-image img {
+    width: 150px; /* Smaller size for smaller screens */
+    height: 150px;
+  }
+
+  .intro-know-more button {
+    font-size: medium;
+    padding: 8px 16px;
+  }
+
+  .contact-icons {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
