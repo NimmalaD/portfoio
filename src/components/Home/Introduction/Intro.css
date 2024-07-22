@@ -99,8 +99,10 @@ body {
 .contact-icons-container {
   text-align: center;
   position: relative;
-  bottom: 100px;
+  bottom: 0;
   opacity: 0;
+  animation: fadeInText1 1s forwards;
+  animation-delay: 2s;
 }
 
 .contact-icons-container.slide-in {
@@ -190,8 +192,12 @@ body {
   }
 
   .contact-icons {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
+  }
+
+  .contact-icons-container {
+    bottom: 0; /* Ensure icons are not overlapping the image */
   }
 }
 
@@ -210,11 +216,11 @@ body {
 @keyframes fadeInText1 {
   from {
     opacity: 0;
-    transform: translate(0);
+    transform: translateY(0);
   }
   to {
     opacity: 1;
-    transform: translate(0);
+    transform: translateY(0);
   }
 }
 
