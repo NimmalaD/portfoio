@@ -100,7 +100,7 @@
 
 @keyframes typing_projects {
   from { width: 0; }
-  to { width: 17%; } /* Adjust width as needed */
+  to { width: 13%; } /* Adjust width as needed */
 }
 
 @keyframes blink-caret_projects {
@@ -186,7 +186,7 @@
   }
   @keyframes typing_projects {
     from { width: 0; }
-    to { width: 29%; } /* Adjust width as needed */
+    to { width: 30%; } /* Adjust width as needed */
   }
   
   @keyframes blink-caret_projects {

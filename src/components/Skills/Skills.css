@@ -17,7 +17,7 @@
   overflow: hidden;
   white-space: nowrap;
   border-right: 0.1em solid #333;
-  animation: typing_skills 0.5s steps(70, end), blink-caret_skills 0.5s step-end infinite;
+  animation: typing_skills 0.5s steps(100, end), blink-caret_skills 0.5s step-end infinite;
   margin: 0 auto; 
   display: inline-block; 
 }
@@ -90,7 +90,7 @@
 
 @keyframes typing_skills {
   from { width: 0; }
-  to { width: 13%; } /* Adjust width as needed */
+  to { width: 10%; } /* Adjust width as needed */
 }
 
 @keyframes blink-caret_skills {
@@ -145,7 +145,7 @@
     font-size: 1.5em; /* Adjusted for smaller screens */
     white-space: nowrap;
   border-right: 0.1em solid #333;
-  animation: typing_skills 0.5s steps(70, end), blink-caret_skills 0.5s step-end infinite;
+  animation: typing_skills_mobile 0.5s steps(70, end), blink-caret_skills_mobile 0.5s step-end infinite;
   margin: 0 auto; 
   display: inline-block; 
   }
@@ -169,12 +169,12 @@
     font-size: 0.9em;
     padding: 5px;
   }
-  @keyframes typing_skills {
+  @keyframes typing_skills_mobile {
     from { width: 0; }
     to { width: 25%; } /* Adjust width as needed */
   }
   
-  @keyframes blink-caret_skills {
+  @keyframes blink-caret_skills_mobile {
     from, to { border-color: transparent; }
     50% { border-color: #333; }
   }

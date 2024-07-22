@@ -90,7 +90,7 @@ button:hover {
   overflow: hidden;
   white-space: nowrap;
   border-right: 0.1em solid #333; /* Corrected border-right property */
-  animation: typing1 0.5s steps(70, end), blink-caret1 0.5s step-end infinite;
+  animation: typing1 0.5s steps(100, end), blink-caret1 0.5s step-end infinite;
 }
 
 .mail {
@@ -100,7 +100,7 @@ button:hover {
 
 @keyframes typing1 {
   from { width: 0; }
-  to { width: 22%; } /* Adjust width as needed */
+  to { width: 17%; } /* Adjust width as needed */
 }
 
 @keyframes blink-caret1 {
@@ -132,7 +132,7 @@ button:hover {
   }
   @keyframes typing1 {
     from { width: 0; }
-    to { width: 37%; } /* Adjust width as needed */
+    to { width: 39%; } /* Adjust width as needed */
   }
   
   @keyframes blink-caret1 {
