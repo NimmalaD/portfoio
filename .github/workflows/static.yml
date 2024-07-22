@@ -52,6 +52,7 @@ jobs:
         with:
           # Upload entire repository
           path: './build'
+        #deploying the uploaded artifacts to the gh-pages branch equivalent to npm run deploy
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
