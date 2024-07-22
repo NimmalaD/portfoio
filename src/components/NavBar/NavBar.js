@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import "./NavBar.css";
 
@@ -11,21 +11,21 @@ const NavBar = ({ toggleTabs }) => {
     setIsOpen(!isOpen);
   };
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (window.scrollY === 0) {
       setIsAtTop(false);
     } else if (window.scrollY > scrollY) {
       setIsAtTop(true);
     }
     setScrollY(window.scrollY);
-  };
-
+  }, [scrollY]);
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollY]);
+  },[handleScroll]);
 
   return (
     <div>

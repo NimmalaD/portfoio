@@ -21,7 +21,6 @@ const SaptamiInfotech = () => {
           <div className="responsibilities">
             <div className="role-date">
             <h4>Software Developer</h4>
-            <h4></h4>
             </div>
             <h4>Responsibilities</h4>
             <ul>
@@ -77,7 +76,6 @@ const SaptamiInfotech = () => {
           <div className="responsibilities">
           <div className="role-date">
             <h4>Software Developer Intern</h4>
-            <h4></h4>
             </div>
             <ul>
               <li>
