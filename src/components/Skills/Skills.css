@@ -11,7 +11,7 @@
 }
 
 .skills-container h1 {
-  font-size: 2.5em;
+  font-size: 2em; /* Adjusted to match the "About Me" heading size */
   font-weight: bold;
   color: #333;
   overflow: hidden;
@@ -57,7 +57,7 @@
   transform: scale(1.07);
   border-color: black;
   color: black;
-  box-shadow: 5px 5px black
+  box-shadow: 5px 5px black;
 }
 
 .skill-section h4 {
@@ -137,4 +137,45 @@
 .skills-grid.show .skill-section:nth-child(6) {
   animation: slide-in 0.3s forwards;
   animation-delay: 1.8s;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .skills-container h1 {
+    font-size: 1.5em; /* Adjusted for smaller screens */
+    white-space: nowrap;
+  border-right: 0.1em solid #333;
+  animation: typing_skills 0.5s steps(70, end), blink-caret_skills 0.5s step-end infinite;
+  margin: 0 auto; 
+  display: inline-block; 
+  }
+
+  .skills-grid {
+    padding: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .skill-section {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .skill-section h4 {
+    font-size: 1em; /* Adjusted for smaller screens */
+  }
+
+  .skill-section li {
+    font-size: 0.9em;
+    padding: 5px;
+  }
+  @keyframes typing_skills {
+    from { width: 0; }
+    to { width: 25%; } /* Adjust width as needed */
+  }
+  
+  @keyframes blink-caret_skills {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+  }
 }

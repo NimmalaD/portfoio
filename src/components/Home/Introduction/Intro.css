@@ -101,48 +101,6 @@ body {
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Icons */
-/* .contact-icons-container {
-  text-align: center;
-  margin-top: 20px;
-  opacity: 0;
-  animation: fadeInText1 1s forwards;
-  animation-delay: 2s;
-}
-
-.contact-icons-container.slide-in {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.contact-icons a {
-  color: #333;
-  transition: color 0.3s, transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.contact-icons a:nth-child(1).slide-in {
-  animation: slide-in 0.3s forwards;
-  animation-delay: 0.3s;
-}
-
-.contact-icons a:nth-child(2).slide-in {
-  animation: slide-in 0.3s forwards;
-  animation-delay: 0.6s;
-}
-
-.contact-icons a:hover {
-  color: gray; 
-  transform: scale(1.2); 
-} */
-
 /* Responsive Design */
 @media (min-width: 768px) {
   .intro-section {
@@ -176,9 +134,13 @@ body {
 }
 
 @media (max-width: 767px) {
+
   .intro-section {
+    display: flex;
+    text-align: center;
     padding: 10px;
     height: auto;
+    margin-top: 60px; /* Space for navbar */
   }
 
   .intro-name {
@@ -186,15 +148,17 @@ body {
   }
 
   .h1-there, .h1-name, .h1-position {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .h1-name strong {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .intro-image {
-    margin-top: 10px; /* Reduce margin for smaller screens */
+    position: relative;
+    top: 20px;
+    margin-top: 20px; /* Reduce margin for smaller screens */
   }
 
   .intro-image img {
@@ -203,11 +167,11 @@ body {
   }
 
   .intro-know-more {
-    top: 10px; /* Adjust top position for smaller screens */
+    top: 20px; /* Adjust top position for smaller screens */
   }
 
   .intro-know-more button {
-    font-size: medium;
+    font-size: small;
     padding: 8px 16px;
   }
 

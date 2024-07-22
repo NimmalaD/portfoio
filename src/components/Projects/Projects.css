@@ -11,7 +11,7 @@
 }
 
 .projects-container h1 {
-  font-size: 2.5em;
+  font-size: 2em; /* Adjusted to match "About Me" heading size */
   font-weight: bold;
   color: #333;
   overflow: hidden;
@@ -25,11 +25,11 @@
 .projects-grid {
   opacity: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 50px;
-  column-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 30px;
+  column-gap: 30px;
   justify-items: center;
-  padding: 50px;
+  padding: 40px;
   transition: opacity 0.5s ease-in-out;
   margin-bottom: 230px;
 }
@@ -40,10 +40,10 @@
 
 .project-section {
   background-color: white;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   border: 2px solid #e0e0e0;
   opacity: 0;
   transform: translateY(100%);
@@ -59,14 +59,12 @@
   transform: scale(1.07);
   border-color: black;
   color: black;
-  box-shadow: 5px 5px black ;
-  
- }
-
- .project-section:hover p {
-  border: 1.5px solid black;
+  box-shadow: 5px 5px black;
 }
 
+.project-section:hover p {
+  border: 1.5px solid black;
+}
 
 .project-section h4 {
   padding-bottom: 9px;
@@ -149,4 +147,50 @@
 .projects-grid.show .project-section:nth-child(6) {
   animation: slide-in 0.3s forwards;
   animation-delay: 1.8s;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .projects-container h1 {
+    font-size: 1.5em; /* Adjusted for smaller screens */
+    white-space: nowrap;
+  border-right: 0.1em solid #333;
+  animation: typing_projects 0.5s steps(80, end), blink-caret_projects 0.5s step-end infinite;
+  margin: 0 auto; 
+  display: inline-block; 
+  }
+
+  .projects-grid {
+    padding: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .project-section {
+    width: 90%;
+    padding: 10px;
+    max-width: 200px;
+  }
+
+  .project-section h4 {
+    font-size: 1em; /* Adjusted for smaller screens */
+  }
+
+  .project-section p {
+    font-size: 0.6em; /* Adjusted for smaller screens */
+    padding: 5px;
+  }
+
+  .project-section li {
+    font-size: 0.7em; /* Adjusted for smaller screens */
+  }
+  @keyframes typing_projects {
+    from { width: 0; }
+    to { width: 29%; } /* Adjust width as needed */
+  }
+  
+  @keyframes blink-caret_projects {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+  }
 }

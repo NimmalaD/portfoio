@@ -57,7 +57,6 @@
 .text-content:hover{
   box-shadow: 6px 6px black;
   border: 2px solid black;
-
 }
 
 .text-content p strong {
@@ -95,6 +94,7 @@
   box-shadow: 3px 3px rgba(0, 0, 0, 1);
 }
 
+/* Typing animation */
 @keyframes typing {
   from { width: 0; }
   to { width: 40%; } 
@@ -105,6 +105,7 @@
   50% { border-color: #333; }
 }
 
+/* Fade-in animation */
 @keyframes fadeInText1 {
   from {
     opacity: 0;
@@ -113,5 +114,49 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .typing {
+    font-size: 1.5em;
+    border-right: 0.1em solid #333;
+    white-space: nowrap; 
+  overflow: hidden; /* Hides the overflowing text */
+  border-right: 0.1em solid #333; /* Creates a caret */
+  animation: typing 1s steps(100, start), blink-caret 0.5s step-start infinite;
+  }
+
+  .text-content {
+    font-size: 1em;
+    padding: 5px;
+  }
+
+  .experience-buttons ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experience-buttons li {
+    padding: 8px 16px;
+  }
+
+  .about-me-content {
+    padding: 20px;
+  }
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 60%; } 
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
   }
 }

@@ -25,7 +25,7 @@ form.fade-in {
   opacity: 1;
 }
 
-form:hover{
+form:hover {
   box-shadow: 5px 5px black;
   border: 2px solid black;
 }
@@ -84,7 +84,7 @@ button:hover {
 }
 
 .h2-lets-connect {
-  font-size: 2.5em;
+  font-size: 2em; /* Adjusted for responsive design */
   font-weight: bold;
   color: #333;
   overflow: hidden;
@@ -92,7 +92,8 @@ button:hover {
   border-right: 0.1em solid #333; /* Corrected border-right property */
   animation: typing1 0.5s steps(70, end), blink-caret1 0.5s step-end infinite;
 }
-.mail{
+
+.mail {
   position: relative;
   top: 200px;
 }
@@ -105,4 +106,37 @@ button:hover {
 @keyframes blink-caret1 {
   from, to { border-color: transparent; }
   50% { border-color: #333; }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .h2-lets-connect {
+    font-size: 1.5em; /* Adjusted for smaller screens */
+    white-space: nowrap;
+  border-right: 0.1em solid #333; /* Corrected border-right property */
+  animation: typing1 0.5s steps(100, end), blink-caret1 0.5s step-end infinite;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 12px;
+  }
+  @keyframes typing1 {
+    from { width: 0; }
+    to { width: 37%; } /* Adjust width as needed */
+  }
+  
+  @keyframes blink-caret1 {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+  }
 }

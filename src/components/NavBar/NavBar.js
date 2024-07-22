@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX } from "react-icons/fi";
 import "./NavBar.css";
 
 const NavBar = ({ toggleTabs }) => {
@@ -30,24 +30,55 @@ const NavBar = ({ toggleTabs }) => {
   return (
     <div>
       <nav className={`navbar ${isAtTop ? "fade-out" : ""}`}>
-        <div className="nav-logo" onClick={()=>toggleTabs('home')}>Dharma Nimmala</div>
+        <div className="nav-logo" onClick={() => {toggleTabs("home")
+          if(isOpen === true){
+            setIsOpen(false)
+          }
+        }}>
+          Dharma Nimmala
+        </div>
         <div className="menu-icon" onClick={toggleMenu}>
           {isOpen ? <FiX /> : <FiMenu />}
         </div>
-        <ul className={`nav-contents-ul ${isOpen ? 'open' : ''}`}>
-          <li className="nav-contents-li" onClick={() => toggleTabs("home")}>
+        <ul className={`nav-contents-ul ${isOpen ? "open" : ""}`}>
+          <li className="nav-contents-li" onClick={() => {toggleTabs("home")
+          if(isOpen === true){
+            setIsOpen(false)
+          }}}>
             Home
           </li>
-          <li className="nav-contents-li" onClick={() => toggleTabs("aboutme")}>
+          <li className="nav-contents-li" onClick={() => {toggleTabs("aboutme")
+            if(isOpen === true){
+              setIsOpen(false)
+            }
+          }}>
             About Me
           </li>
-          <li className="nav-contents-li" onClick={() => toggleTabs("skills")}>
+          <li className="nav-contents-li" onClick={() => {toggleTabs("skills")
+            if(isOpen === true){
+              setIsOpen(false)
+            }
+          }}>
             Skills
           </li>
-          <li className="nav-contents-li" onClick={() => toggleTabs("projects")}>
+          <li
+            className="nav-contents-li"
+            onClick={() => {toggleTabs("projects")
+              if(isOpen === true){
+                setIsOpen(false)
+              }
+            }}
+          >
             Projects
           </li>
-          <li className="nav-contents-li" onClick={() => toggleTabs("contactme")}>
+          <li
+            className="nav-contents-li"
+            onClick={() => {toggleTabs("contactme")
+              if(isOpen === true){
+                setIsOpen(false)
+              }
+            }}
+          >
             Contact Me
           </li>
         </ul>
