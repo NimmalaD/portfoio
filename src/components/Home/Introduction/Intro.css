@@ -8,6 +8,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: #333; /* Dark text color */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Hero Section */
@@ -16,15 +17,17 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 85vh;
   padding: 20px;
   color: #333;
   text-align: center;
+  margin-top: 60px; /* Space for navbar */
 }
 
 /* Intro Name */
 .intro-name {
   animation: fadeIn 2s ease-out;
+  margin-bottom: 20px;
 }
 
 .h1-there, .h1-name, .h1-position {
@@ -34,14 +37,17 @@ body {
 
 .h1-there {
   animation-delay: 0s;
+  font-size: 2rem;
 }
 
 .h1-name {
   animation-delay: 0.5s;
+  font-size: 2.5rem;
 }
 
 .h1-position {
   animation-delay: 1s;
+  font-size: 1.5rem;
 }
 
 .h1-name strong {
@@ -52,7 +58,7 @@ body {
 
 .intro-know-more {
   position: relative;
-  top: 30px;
+  top: 20px;
   opacity: 0;
   animation: fadeInText1 1s forwards;
   animation-delay: 1.5s;
@@ -98,8 +104,7 @@ body {
 /* Contact Icons */
 .contact-icons-container {
   text-align: center;
-  position: relative;
-  bottom: 0;
+  margin-top: 20px;
   opacity: 0;
   animation: fadeInText1 1s forwards;
   animation-delay: 2s;
@@ -143,10 +148,12 @@ body {
   .intro-section {
     flex-direction: row;
     text-align: left;
+    margin-top: 80px; /* Space for navbar */
   }
 
   .intro-name {
     margin-right: 40px;
+    margin-bottom: 0; /* Remove bottom margin for larger screens */
   }
 
   .h1-there, .h1-name, .h1-position {
@@ -160,6 +167,11 @@ body {
   .intro-image img {
     width: 250px; /* Larger size for bigger screens */
     height: 250px;
+  }
+
+  .contact-icons-container {
+    position: relative;
+    bottom: 0; /* Adjust for larger screens */
   }
 }
 
@@ -181,9 +193,17 @@ body {
     font-size: 2rem;
   }
 
+  .intro-image {
+    margin-top: 10px; /* Reduce margin for smaller screens */
+  }
+
   .intro-image img {
     width: 150px; /* Smaller size for smaller screens */
     height: 150px;
+  }
+
+  .intro-know-more {
+    top: 10px; /* Adjust top position for smaller screens */
   }
 
   .intro-know-more button {
@@ -197,7 +217,7 @@ body {
   }
 
   .contact-icons-container {
-    bottom: 0; /* Ensure icons are not overlapping the image */
+    margin-top: 200px; /* Ensure icons are below the image */
   }
 }
 
@@ -216,11 +236,11 @@ body {
 @keyframes fadeInText1 {
   from {
     opacity: 0;
-    transform: translateY(0);
+    transform: translate(0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(0);
   }
 }
 
