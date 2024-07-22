@@ -31,8 +31,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      # Setup Node.js and install dependencies
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.16.1'  # Specify your Node.js version here
+
+      - name: Install dependencies
+        run: npm install
+
+      # Build the project
+      - name: Build project
+        run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
